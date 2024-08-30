@@ -1,0 +1,43 @@
+﻿@model OneSignalWebApiv1.Entities.Homework
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Homework</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="HomeworkTitle" class="control-label"></label>
+                <input asp-for="HomeworkTitle" class="form-control" />
+                <span asp-validation-for="HomeworkTitle" class="text-danger"></span>
+            </div>
+            @* <div class="form-group">
+                <label asp-for="CREATEDDATE" class="control-label"></label>
+                <input type="datetime" asp-for="CREATEDDATE" class="form-control" />
+                <span asp-validation-for="CREATEDDATE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CREATEDTIME" class="control-label"></label>
+                <input type="datetime" asp-for="CREATEDTIME" class="form-control" />
+                <span asp-validation-for="CREATEDTIME" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

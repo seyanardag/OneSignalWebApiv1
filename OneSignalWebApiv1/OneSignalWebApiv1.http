@@ -1,0 +1,6 @@
+@OneSignalWebApiv1_HostAddress = http://localhost:5041
+
+GET {{OneSignalWebApiv1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

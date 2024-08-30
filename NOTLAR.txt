@@ -1,0 +1,16 @@
+OneSignalSDKWorker.js ana dizinde olmalı.
+////////
+uygulama <head></head> içine eklenmeli
+
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function (OneSignal) {
+        await OneSignal.init({
+            appId: "1af6fc63-a7de-4ccc-8f67-7a6a2a14bd65",
+        });
+    });
+</script>
+
+<script src="~/onesignalsdkworker.js" defer></script>
+/////////
